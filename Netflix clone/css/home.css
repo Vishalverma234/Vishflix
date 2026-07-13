@@ -273,3 +273,21 @@ background:red;
 color:white;
 
 }
+#watchTrailerBtn{
+
+    margin-top:20px;
+    padding:12px 25px;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+
+}
+
+#watchTrailerBtn:hover{
+
+    background:#b30000;
+
+}

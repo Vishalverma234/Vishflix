@@ -95,6 +95,9 @@ async function loadMovies(endpoint, containerId) {
             img.className = "movie-poster";
 
             img.addEventListener("click", () => {
+            document.getElementById("watchTrailerBtn").onclick = () => {
+            openTrailer(movie.id);
+         };
 
          document.getElementById("movieModal").style.display = "flex";
 
@@ -209,3 +212,39 @@ document.getElementById("searchInput").addEventListener("keypress",function(e){
     }
 
 });
+async function openTrailer(movieId) {
+
+    try {
+
+        const response = await fetch(
+            `${BASE_URL}/movie/${movieId}/videos?api_key=${API_KEY}`
+        );
+
+        const data = await response.json();
+
+        const trailer = data.results.find(
+            video =>
+                video.type === "Trailer" &&
+                video.site === "YouTube"
+        );
+
+        if (trailer) {
+
+            window.open(
+                `https://www.youtube.com/watch?v=${trailer.key}`,
+                "_blank"
+            );
+
+        } else {
+
+            alert("Trailer not available.");
+
+        }
+
+    } catch (error) {
+
+        console.log(error);
+
+    }
+
+}
