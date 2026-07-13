@@ -323,3 +323,141 @@ color:white;
     color:#999;
     margin-top:50px;
 }
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:20px;
+
+    }
+
+    .right{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    #logoutBtn,
+    .mylist-btn{
+
+        width:100%;
+
+    }
+
+    .search-box{
+
+        flex-direction:column;
+
+        padding:15px;
+
+    }
+
+    #searchInput{
+
+        width:100%;
+
+    }
+
+    #searchBtn{
+
+        width:100%;
+
+    }
+
+    .movie-row{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+
+    }
+
+    .movie-poster{
+
+        width:100%;
+
+    }
+
+    .hero-banner{
+
+        height:auto;
+
+        padding:40px 20px;
+
+    }
+
+    .banner-content h1{
+
+        font-size:32px;
+
+    }
+
+    .banner-content p{
+
+        font-size:16px;
+
+    }
+
+    .modal-content{
+
+        flex-direction:column;
+
+        width:95%;
+
+        height:auto;
+
+    }
+
+    #modalPoster{
+
+        width:100%;
+
+    }
+
+}
+@media (max-width:480px){
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+    h2{
+
+        font-size:22px;
+
+    }
+
+    .movie-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .banner-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .play-btn,
+    .info-btn{
+
+        width:100%;
+
+    }
+
+}

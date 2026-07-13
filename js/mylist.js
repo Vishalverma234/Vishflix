@@ -24,17 +24,39 @@ if (myList.length === 0) {
 
         card.className = "movie-card";
 
-        card.innerHTML = `
-            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
-            <h3>${movie.title}</h3>
-        `;
+       card.innerHTML = `
+     <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
 
+     <h3>${movie.title}</h3>
+
+     <p>⭐ ${movie.vote_average}</p>
+
+     <button class="remove-btn" data-id="${movie.id}">
+        🗑 Remove
+     </button>
+     `;
         container.appendChild(card);
 
     });
 
 }
+document.querySelectorAll(".remove-btn").forEach(button => {
 
+    button.addEventListener("click", function () {
+
+        const movieId = Number(this.dataset.id);
+
+        let myList = JSON.parse(localStorage.getItem("myList")) || [];
+
+        myList = myList.filter(movie => movie.id !== movieId);
+
+        localStorage.setItem("myList", JSON.stringify(myList));
+
+        location.reload();
+
+    });
+
+});
 // Logout
 
 document.getElementById("logoutBtn").addEventListener("click", () => {

@@ -77,3 +77,28 @@ body{
     color:#aaa;
     margin-top:80px;
 }
+.remove-btn{
+
+    width:100%;
+    margin-top:10px;
+    padding:10px;
+
+    border:none;
+
+    background:#e50914;
+
+    color:white;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.remove-btn:hover{
+
+    background:#b20710;
+
+}
