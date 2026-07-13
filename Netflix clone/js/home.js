@@ -98,6 +98,9 @@ async function loadMovies(endpoint, containerId) {
             document.getElementById("watchTrailerBtn").onclick = () => {
             openTrailer(movie.id);
          };
+         document.getElementById("addToListBtn").onclick = () => {
+         addToMyList(movie);
+           };
 
          document.getElementById("movieModal").style.display = "flex";
 
@@ -246,5 +249,24 @@ async function openTrailer(movieId) {
         console.log(error);
 
     }
+
+}
+function addToMyList(movie) {
+
+    let myList = JSON.parse(localStorage.getItem("myList")) || [];
+
+    // Duplicate check
+    const exists = myList.find(m => m.id === movie.id);
+
+    if (exists) {
+        alert("Movie already in My List ❤️");
+        return;
+    }
+
+    myList.push(movie);
+
+    localStorage.setItem("myList", JSON.stringify(myList));
+
+    alert("Movie Added to My List ❤️");
 
 }

@@ -20,9 +20,15 @@
 
     <div class="right">
 
+        <button onclick="window.location.href='mylist.html'" class="mylist-btn">
+            ❤️ My List
+        </button>
+
         <span id="userEmail"></span>
 
-        <button id="logoutBtn">Logout</button>
+        <button id="logoutBtn">
+            Logout
+        </button>
 
     </div>
 
@@ -46,10 +52,13 @@
     <p>Enjoy your favourite movies and TV shows.</p>
 
 </section>
- <h2>Search Results</h2>
+ <section class="movies">
+
+    <h2>Search Results</h2>
 
     <div id="searchResults" class="movie-row"></div>
-<section class="movies">
+
+</section>
 
     <h2>Trending Now</h2>
 
@@ -117,6 +126,9 @@
             <button id="watchTrailerBtn" class="play-btn">
           ▶ Watch Trailer
            </button>
+           <button id="addToListBtn" class="list-btn">
+          ❤️ Add to My List
+          </button>
 
         </div>
 
@@ -124,5 +136,10 @@
 
 </div>
 <script src="js/home.js"></script>
+<footer class="footer">
+
+    <p>© 2026 StreamVerse | Built by Vishal Verma</p>
+
+</footer>
 </body>
 </html>
