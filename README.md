@@ -2,7 +2,7 @@
 
 A modern Netflix-inspired movie streaming web application built using **HTML, CSS, JavaScript, and the TMDB API**.
 
-🔗 **Live Demo:** https://vishalverma234.github.io/VishFlix/
+🔗 **Live Demo:** https://vishalverma234.github.io/Vishflix/
 
 ---
 
