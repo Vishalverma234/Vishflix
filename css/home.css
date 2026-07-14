@@ -323,141 +323,87 @@ color:white;
     color:#999;
     margin-top:50px;
 }
-/* ===========================
-   MOBILE RESPONSIVE
-=========================== */
+/* =========================
+   Responsive Design
+========================= */
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
     nav{
-
-        flex-direction:column;
-
+        flex-direction: column;
         gap:15px;
-
-        padding:20px;
-
+        padding:15px;
     }
 
     .right{
-
-        flex-direction:column;
-
         width:100%;
-
-    }
-
-    #logoutBtn,
-    .mylist-btn{
-
-        width:100%;
-
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
     }
 
     .search-box{
-
-        flex-direction:column;
-
-        padding:15px;
-
+        width:90%;
+        margin:20px auto;
     }
 
-    #searchInput{
-
+    .search-box input{
         width:100%;
-
-    }
-
-    #searchBtn{
-
-        width:100%;
-
+        font-size:16px;
     }
 
     .movie-row{
+        gap:12px;
+        overflow-x:auto;
+        scrollbar-width:none;
+    }
 
-        display:grid;
-
-        grid-template-columns:repeat(2,1fr);
-
-        gap:15px;
-
+    .movie-row::-webkit-scrollbar{
+        display:none;
     }
 
     .movie-poster{
-
-        width:100%;
-
+        width:140px;
     }
 
     .hero-banner{
+        height:60vh;
+        padding:20px;
+    }
 
-        height:auto;
-
-        padding:40px 20px;
-
+    .banner-content{
+        width:100%;
     }
 
     .banner-content h1{
-
         font-size:32px;
-
     }
 
     .banner-content p{
-
-        font-size:16px;
-
-    }
-
-    .modal-content{
-
-        flex-direction:column;
-
-        width:95%;
-
-        height:auto;
-
-    }
-
-    #modalPoster{
-
-        width:100%;
-
-    }
-
-}
-@media (max-width:480px){
-
-    h1{
-
-        font-size:28px;
-
-    }
-
-    h2{
-
-        font-size:22px;
-
-    }
-
-    .movie-row{
-
-        grid-template-columns:1fr;
-
+        font-size:15px;
     }
 
     .banner-buttons{
-
+        display:flex;
         flex-direction:column;
-
+        gap:10px;
     }
 
-    .play-btn,
-    .info-btn{
+    .banner-buttons button{
+        width:180px;
+    }
 
+    .modal-content{
+        width:95%;
+        flex-direction:column;
+    }
+
+    .modal-content img{
         width:100%;
+    }
 
+    .modal-info{
+        padding:20px;
     }
 
 }
