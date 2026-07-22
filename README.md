@@ -148,7 +148,7 @@ GitHub:
 https://github.com/Vishalverma234
 
 LinkedIn:
-(Add your LinkedIn profile)
+https://www.linkedin.com/in/vishal-verma-a1763b302/
 
 ---
 
